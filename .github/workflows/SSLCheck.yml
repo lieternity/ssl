@@ -35,7 +35,7 @@ jobs:
         npm run build
         cd CheckSSL
         chmod +x checker.sh
-        ./checker.sh www.bugjava.cn blog.bugjava.cn api.bugjava.cn img.bugjava.cn m.bugjava.cn donate.bugjava.cn monitor.bugjava.cn images.bugjava.cn bugjava.cn
+        ./checker.sh www.bugjava.cn blog.bugjava.cn api.bugjava.cn img.bugjava.cn m.bugjava.cn donate.bugjava.cn monitor.bugjava.cn images.bugjava.cn bbs.bugjava.cn bugjava.cn
         cp -rf ./output/ct.json ../public/ct.json
         echo "ssl.bugjava.cn" > ../public/CNAME
         
