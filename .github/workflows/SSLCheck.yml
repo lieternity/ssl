@@ -1,11 +1,11 @@
-name: SSL Check
+name: ChenYFanのSSLCheck
 
 on: 
   push:
     branches: 
       - master
-  #schedule:
-    #- cron: '0 16 * * *' 
+  schedule:
+    - cron: '0 21 * * *' 
 
 jobs:
   CheckSSL:
@@ -28,9 +28,8 @@ jobs:
 
     - name: Install & Build
       run: |
-        TZ='Asia/Shanghai'; export TZ
         npm i
-        git clone https://github.com/yfun-lab/CheckSSL --depth=2
+        git clone https://github.com/ChenYFan/CheckSSL --depth=2
         npm run build
         cd CheckSSL
         chmod +x checker.sh
